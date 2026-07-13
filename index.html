@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emabitex - Soluciones Gráficas y Tecnológicas</title>
+    <link rel="icon" type="image/png" href="./src/profilePhoto.jpg">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Emabitex</div>
+        <nav>
+            <ul>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#portfolio">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Bienvenido a Emabitex</h1>
+            <p>Somos una empresa dedicada a ofrecer soluciones tecnológicas y gráficas innovadoras.</p>
+        </section>
+
+        <!-- SECCIÓN SERVICIOS -->
+        <section id="servicios" class="seccion-container">
+            <h2>Nuestros Servicios</h2>
+            <div class="grid-container">
+
+                <!-- 1. Indumentaria Laboral -->
+                <div class="card">
+                    <div class="card-icon">
+                        <!-- SVG: Camisa de trabajo / Chaqueta con pespunte y bolsillo -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <path d="M20 7L16 4H8L4 7L6 11L8 10V20H16V10L18 11Z" />
+                            <!-- Pespunte central / Cierre -->
+                            <path d="M12 4V20" stroke-dasharray="2 2" class="svg-acento-clay" />
+                            <!-- Bolsillo de trabajo -->
+                            <rect x="14" y="8" width="3" height="4" rx="0.5" class="svg-acento-sage" />
+                        </svg>
+                    </div>
+                    <h3>Indumentaria Laboral</h3>
+                    <p>Confección de ropa de trabajo resistente y cómoda, diseñada para el uso diario y exigente de tu
+                        equipo.</p>
+                </div>
+
+                <!-- 2. Merchandising para Pymes -->
+                <div class="card">
+                    <div class="card-icon">
+                        <!-- SVG: Tote bag / Bolsa de tela -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <!-- Cuerpo de la bolsa -->
+                            <path d="M6 8H18V20C18 21.1 17.1 22 16 22H8C6.9 22 6 21.1 6 20V8Z" />
+                            <!-- Manijas -->
+                            <path d="M9 8V5C9 3.34 10.34 2 12 2C13.66 2 15 3.34 15 5V8" class="svg-acento-sage" />
+                            <!-- Estampa central -->
+                            <circle cx="12" cy="14" r="2" class="svg-acento-clay" />
+                        </svg>
+                    </div>
+                    <h3>Merchandising para Pymes</h3>
+                    <p>Artículos personalizados para potenciar la identidad de tu proyecto, emprendimiento o cooperativa
+                        con productos de alta calidad.</p>
+                </div>
+
+                <!-- 3. Indumentaria para Eventos -->
+                <div class="card">
+                    <div class="card-icon">
+                        <!-- SVG: Remera con credencial colgante -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <!-- Silueta remera -->
+                            <path d="M20 7l-4-3H8L4 7l2 4 2-1v10h8V10l2 1 2-4z" />
+                            <!-- Cordón de credencial -->
+                            <path d="M9 4l3 5 3-5" class="svg-acento-sage" />
+                            <!-- Tarjeta / Credencial del evento -->
+                            <rect x="10.5" y="9" width="3" height="4" rx="0.5" class="svg-acento-clay" />
+                        </svg>
+                    </div>
+                    <h3>Indumentaria para Eventos</h3>
+                    <p>Remeras y prendas exclusivas para ferias, exposiciones o encuentros, producidas con excelentes
+                        tiempos de entrega.</p>
+                </div>
+
+                <!-- 4. Servicios de Serigrafía -->
+                <div class="card">
+                    <div class="card-icon">
+                        <!-- SVG: Manigueta (Rasqueta) de Serigrafía -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <rect x="6" y="4" width="12" height="4" rx="1" />
+                            <path d="M8 8 L7 13 H17 L16 8" />
+                            <rect x="7" y="13" width="10" height="3" />
+                            <path d="M4 19 Q 12 21.5, 20 19" class="svg-acento-sage" />
+                        </svg>
+                    </div>
+                    <h3>Servicios de Serigrafía</h3>
+                    <p>Técnicas avanzadas asegurando durabilidad, colores vibrantes y estampados ligeros que permiten la
+                        respirabilidad de la prenda.</p>
+                </div>
+
+                <!-- 5. Gráfica Impresa -->
+                <div class="card">
+                    <div class="card-icon">
+                        <!-- SVG: Tarjetas / Hojas apiladas -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <!-- Papel frontal -->
+                            <rect x="4" y="6" width="12" height="14" rx="1" />
+                            <!-- Papel posterior desfasado -->
+                            <path d="M8 6V4C8 3.45 8.45 3 9 3H19C19.55 3 20 3.45 20 4V14C20 14.55 19.55 15 19 15H16"
+                                class="svg-acento-sage" />
+                            <!-- Líneas de texto -->
+                            <line x1="7" y1="10" x2="13" y2="10" class="svg-acento-clay" />
+                            <line x1="7" y1="14" x2="13" y2="14" />
+                        </svg>
+                    </div>
+                    <h3>Gráfica Impresa</h3>
+                    <p>Diseño e impresión de calendarios, tarjetas y todo tipo de elementos gráficos para destacar tu
+                        marca en papel.</p>
+                </div>
+
+                <!-- 6. Reestructuración de Marca -->
+                <div class="card">
+                    <div class="card-icon">
+                        <!-- SVG: Guías de corte y registro -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="3" />
+                            <line x1="12" y1="7" x2="12" y2="17" class="svg-acento-clay" />
+                            <line x1="7" y1="12" x2="17" y2="12" class="svg-acento-clay" />
+                            <path d="M4 8 V4 H8" class="svg-acento-sage" />
+                            <path d="M16 4 H20 V8" class="svg-acento-sage" />
+                            <path d="M4 16 V20 H8" class="svg-acento-sage" />
+                            <path d="M16 20 H20 V16" class="svg-acento-sage" />
+                        </svg>
+                    </div>
+                    <h3>Reestructuración de Marca</h3>
+                    <p>Le damos una nueva cara a tu negocio: diseño de logos desde cero y desarrollo de toda la línea de
+                        merchandising visual.</p>
+                </div>
+
+                <!-- 7. Desarrollo Web Personalizado -->
+                <div class="card">
+                    <div class="card-icon">
+                        <!-- SVG: Navegador web con código -->
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <!-- Ventana del navegador -->
+                            <rect x="2" y="4" width="20" height="16" rx="1.5" />
+                            <path d="M2 8H22" />
+                            <!-- Botones de la ventana -->
+                            <circle cx="5.5" cy="6" r="0.5" class="svg-acento-clay" />
+                            <circle cx="8" cy="6" r="0.5" class="svg-acento-sage" />
+                            <!-- Etiquetas de código -->
+                            <path d="M9 12l-2 2 2 2" class="svg-acento-sage" />
+                            <path d="M15 12l2 2-2 2" class="svg-acento-sage" />
+                            <path d="M13 11l-2 6" class="svg-acento-clay" />
+                        </svg>
+                    </div>
+                    <h3>Desarrollo Web Personalizado</h3>
+                    <p>Creación de páginas web desde cero, pensadas a medida de tus necesidades para integrar un diseño
+                        visual potente con funcionamiento impecable.</p>
+                </div>
+
+            </div>
+        </section>
+        <!-- SECCIÓN PORTFOLIO DINÁMICO -->
+        <section id="portfolio" class="seccion-container">
+            <h2>Proyectos Destacados</h2>
+            <p style="text-align: center; color: #555; margin-bottom: 30px;">
+                Conocé cómo ayudamos a pymes y proyectos a potenciar su identidad.
+            </p>
+
+            <!-- Acá se van a inyectar las tarjetas desde el JS -->
+            <div id="portfolio-grid" class="grid-container">
+                <p id="cargando">Cargando proyectos...</p>
+            </div>
+        </section>
+        <!-- SECCIÓN NOSOTROS -->
+        <section id="nosotros" class="seccion-container">
+            <h2>Sobre Nosotros</h2>
+            <div class="nosotros-contenido">
+                <div class="nosotros-texto">
+                    <p>En <strong>Emabitex</strong> somos un taller integral de diseño, desarrollo tecnológico y
+                        producción textil. Nacimos con el objetivo de brindar soluciones de alta calidad, pensadas
+                        específicamente para las exigencias del trabajo diario.</p>
+                    <p>Nos encargamos de todo el proceso productivo y creativo: desde pensar la reestructuración visual
+                        de tu marca y programar tu página web desde cero, hasta la manufactura completa de tu
+                        indumentaria y merchandising.</p>
+                    <p>Entendemos que la ropa de trabajo tiene que ser, ante todo, funcional. Por eso, en nuestro taller
+                        priorizamos técnicas de estampado que garantizan la correcta respirabilidad de la tela. Evitamos
+                        las capas densas de tinta que vuelven a las prendas pesadas y calurosas, asegurando el máximo
+                        confort para el usuario.</p>
+                    <p>Nuestro compromiso es acompañar a <strong>pymes, cooperativas y emprendimientos</strong> de
+                        Argentina a potenciar su identidad, entregando productos duraderos, prácticos y listos para el
+                        uso intensivo.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO -->
+        <section id="contacto" class="seccion-container">
+            <h2>Contacto</h2>
+            <p style="text-align: center; color: #555; margin-bottom: 30px;">
+                ¿Tenés un proyecto en mente? Escribinos. Contanos qué necesitás y te asesoramos de forma personalizada.
+            </p>
+
+            <div class="contacto-wrapper">
+                <div class="info-contacto">
+                    <h3>Hablemos</h3>
+                    <p><strong>Ubicación:</strong> Buenos Aires, Argentina.</p>
+                    <p><strong>Producción:</strong> Manejamos tiempos de producción estándar de 10 a 15 días para
+                        pedidos de indumentaria y merchandising personalizado.</p>
+                    <a href="https://wa.me/5491165192516" target="_blank" class="btn-whatsapp">Consultar por
+                        WhatsApp</a>
+                </div>
+                <form id="form-contacto" class="formulario-contacto" action="https://formspree.io/f/TU_CODIGO_ACA"
+                    method="POST" novalidate>
+
+                    <div class="form-group">
+                        <label for="nombre">Nombre</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre o el de tu proyecto">
+                        <span class="msj-error" id="error-nombre"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" placeholder="hola@tuproyecto.com">
+                        <span class="msj-error" id="error-email"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" placeholder="Contame qué necesitás..."></textarea>
+                        <span class="msj-error" id="error-mensaje"></span>
+                    </div>
+                    
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+                    <button type="submit" class="btn-enviar" id="btn-submit">Enviar Mensaje</button>
+
+                    <p id="form-status" class="form-status"></p>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script src="./src/app.js"></script>
+
+</body>
+
+</html>

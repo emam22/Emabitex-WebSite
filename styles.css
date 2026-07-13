@@ -1,0 +1,590 @@
+/* =========================================================
+   EMABITEX — Soluciones Gráficas y Tecnológicas
+   Estilo: minimalista, cálido y elegante.
+   Paleta inspirada en textiles crudos e hilo: piedra, lino,
+   verde salvia apagado y terracota tenue como acentos.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Work+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap');
+
+:root {
+    /* Paleta */
+    --stone-50: #F6F4F0;
+    /* fondo general, lino crudo */
+    --stone-100: #EFEBE4;
+    /* fondo alterno de secciones */
+    --stone-200: #E2DCD1;
+    /* bordes suaves */
+    --ink-900: #2E2C27;
+    /* texto principal */
+    --ink-600: #5C574C;
+    /* texto secundario */
+    --sage-500: #6E7F63;
+    /* acento primario — hilo verde salvia */
+    --sage-600: #566450;
+    /* acento hover */
+    --clay-400: #C08F6B;
+    /* acento secundario — terracota tenue */
+    --paper-0: #FCFBF9;
+    /* tarjetas / superficies elevadas */
+
+    /* Tipografía */
+    --font-display: 'Fraunces', serif;
+    --font-body: 'Work Sans', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+
+    /* Otros */
+    --radius: 0.25rem; /* 4px */
+    --transition: 220ms ease;
+    --stitch: repeating-linear-gradient(to right,
+            var(--stone-200) 0,
+            var(--stone-200) 0.375rem, /* 6px */
+            transparent 0.375rem, /* 6px */
+            transparent 0.75rem); /* 12px */
+}
+
+/* ---------- Reset básico ---------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--stone-50);
+    color: var(--ink-900);
+    line-height: 1.6;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    color: var(--ink-900);
+    letter-spacing: -0.01em;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+:focus-visible {
+    outline: 0.125rem solid var(--sage-500); /* 2px */
+    outline-offset: 0.1875rem; /* 3px */
+}
+
+/* ---------- Header ---------- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.4rem 6vw;
+    background-color: rgba(246, 244, 240, 0.88);
+    backdrop-filter: blur(0.5rem); /* 8px */
+    border-bottom: 1px solid var(--stone-200); /* Mantenido en px por nitidez */
+}
+
+.logo {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--ink-900);
+}
+
+header nav ul {
+    display: flex;
+    gap: 2.2rem;
+    list-style: none;
+}
+
+header nav ul li a {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-600);
+    position: relative;
+    padding-bottom: 0.25rem; /* 4px */
+    transition: color var(--transition);
+}
+
+header nav ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0%;
+    height: 1px; /* Mantenido en px por nitidez */
+    background-color: var(--sage-500);
+    transition: width var(--transition);
+}
+
+header nav ul li a:hover,
+header nav ul li a:focus-visible {
+    color: var(--sage-600);
+}
+
+header nav ul li a:hover::after,
+header nav ul li a:focus-visible::after {
+    width: 100%;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 6rem 6vw 5rem;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: clamp(2.6rem, 6vw, 4.4rem);
+    max-width: 16ch;
+    line-height: 1.05;
+}
+
+.hero p {
+    margin-top: 1.4rem;
+    max-width: 46ch;
+    font-size: 1.1rem;
+    color: var(--ink-600);
+    font-weight: 300;
+}
+
+.hero::after {
+    content: "";
+    display: block;
+    width: 8.75rem; /* 140px */
+    height: 0.125rem; /* 2px */
+    margin-top: 2.6rem;
+    background-image: var(--stitch);
+}
+
+/* ---------- Secciones generales ---------- */
+.seccion-container {
+    padding: 6rem 6vw;
+    max-width: 73.75rem; /* 1180px */
+    margin: 0 auto;
+}
+
+.seccion-container h2 {
+    font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+    text-align: center;
+    margin-bottom: 0.6rem;
+}
+
+.seccion-container>h2::after {
+    content: "";
+    display: block;
+    width: 3.75rem; /* 60px */
+    height: 0.125rem; /* 2px */
+    margin: 1.4rem auto 3.2rem;
+    background-image: var(--stitch);
+}
+
+#nosotros {
+    background-color: var(--stone-100);
+    max-width: none;
+    border-top: 1px solid var(--stone-200); /* Mantenido en px por nitidez */
+    border-bottom: 1px solid var(--stone-200); /* Mantenido en px por nitidez */
+}
+
+#nosotros .seccion-container,
+#nosotros.seccion-container {
+    max-width: 73.75rem; /* 1180px */
+    margin: 0 auto;
+}
+
+/* ---------- Grid de tarjetas (Servicios / Portfolio) ---------- */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  gap: 1.5rem;
+  align-items: stretch;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.05);
+}
+
+.card h4:nth-of-type(3) {
+  margin-top: auto;
+  padding-top: 1rem; 
+}
+
+.card:hover {
+    transform: translateY(-0.25rem); /* -4px */
+    border-color: var(--sage-500);
+    box-shadow: 0 0.75rem 1.75rem -1.125rem rgba(46, 44, 39, 0.25); /* 0 12px 28px -18px */
+}
+
+.card h3 {
+    font-size: 1.15rem;
+    margin-bottom: 0.7rem;
+    color: var(--sage-600);
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: var(--ink-600);
+    font-weight: 300;
+}
+
+/* ---------- Portfolio dinámico ---------- */
+#portfolio-grid #cargando {
+    grid-column: 1 / -1;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--ink-600);
+    letter-spacing: 0.04em;
+}
+
+.error-portfolio {
+    grid-column: 1 / -1;
+    text-align: center;
+    max-width: 32.5rem; /* 520px */
+    margin: 0 auto;
+    padding: 1.8rem;
+    background-color: var(--paper-0);
+    border: 1px dashed var(--clay-400); /* Mantenido en px por nitidez */
+    border-radius: var(--radius);
+    color: var(--ink-600);
+    font-size: 0.9rem;
+}
+
+.error-portfolio strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--ink-900);
+}
+
+.error-portfolio code {
+    font-family: var(--font-mono);
+    background-color: var(--stone-100);
+    padding: 0.1rem 0.4rem;
+    border-radius: 0.1875rem; /* 3px */
+    font-size: 0.85em;
+}
+
+/* Tarjetas de portfolio inyectadas por portfolio.js */
+#portfolio-grid {
+    align-items: start;
+}
+
+#portfolio-grid .card {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+}
+
+#portfolio-grid .card h3 {
+    font-size: 1.2rem;
+    color: var(--ink-900);
+    margin-bottom: 0.6rem;
+}
+
+#portfolio-grid .card .etiqueta {
+    display: inline-block;
+    align-self: flex-start;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--sage-600);
+    background-color: var(--stone-100);
+    border: 1px solid var(--stone-200); /* Mantenido en px por nitidez */
+    border-radius: 99rem; /* 999px (efecto píldora) */
+    padding: 0.3rem 0.8rem;
+    margin-bottom: 1.4rem;
+}
+
+#portfolio-grid .card h4 {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    color: var(--clay-400);
+    margin-top: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+
+#portfolio-grid .card h4:first-of-type {
+    margin-top: 0;
+}
+
+#portfolio-grid .card p {
+    font-size: 0.92rem;
+    font-weight: 300;
+    color: var(--ink-600);
+}
+
+#portfolio-grid .card p strong {
+    font-weight: 600;
+    color: var(--ink-900);
+}
+
+/* ---------- Nosotros ---------- */
+.nosotros-contenido {
+    max-width: 47.5rem; /* 760px */
+    margin: 0 auto;
+}
+
+.nosotros-texto p {
+    font-size: 1.05rem;
+    font-weight: 300;
+    color: var(--ink-600);
+    margin-bottom: 1.3rem;
+    padding-left: 1.4rem;
+    border-left: 0.125rem solid var(--clay-400); /* 2px */
+}
+
+.nosotros-texto p:last-child {
+    margin-bottom: 0;
+}
+
+.nosotros-texto strong {
+    color: var(--ink-900);
+    font-weight: 600;
+}
+
+/* ---------- Contacto ---------- */
+.contacto-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+.info-contacto h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.info-contacto p {
+    font-size: 0.95rem;
+    color: var(--ink-600);
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.info-contacto strong {
+    color: var(--ink-900);
+    font-weight: 600;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.85rem 1.8rem;
+    background-color: var(--sage-500);
+    color: var(--paper-0);
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-radius: var(--radius);
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+.btn-whatsapp:hover,
+.btn-whatsapp:focus-visible {
+    background-color: var(--sage-600);
+    transform: translateY(-0.125rem); /* -2px */
+}
+
+.formulario-contacto {
+    background-color: var(--paper-0);
+    border: 1px solid var(--stone-200); /* Mantenido en px por nitidez */
+    border-radius: var(--radius);
+    padding: 2.4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--ink-600);
+}
+
+.form-group input,
+.form-group textarea {
+    font-family: var(--font-body);
+    font-size: 0.98rem;
+    color: var(--ink-900);
+    background-color: var(--stone-50);
+    border: 1px solid var(--stone-200); /* Mantenido en px por nitidez */
+    border-radius: var(--radius);
+    padding: 0.85rem 1rem;
+    transition: border-color var(--transition), background-color var(--transition);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--ink-600);
+    opacity: 0.6;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--sage-500);
+    background-color: var(--paper-0);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 7.5rem; /* 120px */
+}
+
+.btn-enviar {
+    align-self: flex-start;
+    padding: 0.9rem 2.2rem;
+    background-color: var(--ink-900);
+    color: var(--paper-0);
+    border: none;
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color var(--transition), transform var(--transition);
+}
+
+.btn-enviar:hover,
+.btn-enviar:focus-visible {
+    background-color: var(--sage-600);
+    transform: translateY(-0.125rem); /* -2px */
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 53.75rem) /* 860px */ {
+    .contacto-wrapper {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 40rem) /* 640px */ {
+    header {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1.2rem 6vw;
+    }
+
+    header nav ul {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        padding: 4rem 6vw 3.5rem;
+    }
+
+    .seccion-container {
+        padding: 4rem 6vw;
+    }
+
+    .formulario-contacto {
+        padding: 1.6rem;
+    }
+}
+
+/* ---------- Accesibilidad: reducir movimiento ---------- */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ---------- Íconos de Servicios ---------- */
+.card-icon {
+    margin-bottom: 1.25rem;
+    display: flex;
+}
+
+.card-icon svg {
+    width: 2.75rem; /* 44px */
+    height: 2.75rem; /* 44px */
+    color: var(--ink-900); /* Toma el color de texto principal */
+    stroke-width: 1.25; /* Trazo fino y elegante */
+    transition: transform var(--transition);
+}
+
+/* Clases para los toques de color en los SVG */
+.svg-acento-sage {
+    stroke: var(--sage-500);
+    stroke-width: 1.5; /* Un pelín más grueso para que destaque */
+}
+
+.svg-acento-clay {
+    stroke: var(--clay-400);
+    stroke-width: 1.5;
+}
+
+/* Efecto de movimiento en el ícono al hacer hover en la tarjeta */
+.card:hover .card-icon svg {
+    transform: translateY(-0.25rem) scale(1.05); /* Sube y se agranda apenitas */
+}
+.msj-error {
+    color: var(--clay-400);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    min-height: 1.125rem;
+    display: none;
+    margin-top: -0.25rem;
+}
+
+.form-status {
+    display: none;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    font-weight: 500;
+    font-family: var(--font-mono);
+    text-align: center;
+}
+
+.input-invalido {
+    border-color: var(--clay-400) !important;
+    background-color: #fdfaf8 !important;
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": "giovanhela",
+    "cliente": "Giovanhela - Refrigeración S.R.L.",
+    "servicio": "Optimización de Marca y Serigrafía",
+    "desafio": "Reducir la densidad de tinta en los uniformes de trabajo que anulaba la porosidad de la tela.",
+    "solucion": "Se rediseñó la marca hacia una versión de contornos limpios (outline). Al vaciar los fondos sólidos y usar el color de la prenda, logramos un estampado ligero.",
+    "impacto": "Remeras más frescas, ahorro en tintas y estética moderna maximizando la transpirabilidad."
+  },
+  {
+    "id": "batial",
+    "cliente": "Batial S.A.",
+    "servicio": "Identidad Visual y Ficha Técnica",
+    "desafio": "Crear una identidad de alta legibilidad para aplicación en uniformes oscuros de trabajo industrial.",
+    "solucion": "Desarrollo de estética de alto contraste, integrando proporciones oficiales de la bandera argentina y detalles que reflejan la cultura de los fundadores.",
+    "impacto": "Fuerte sentido de pertenencia y reproducción estandarizada sin errores en talleres."
+  },
+  {
+    "id": "distribuidora-jp",
+    "cliente": "Distribuidora JP",
+    "servicio": "Evolución de Identidad Visual",
+    "desafio": "Mejorar un diseño de texto plano que carecía de reconocimiento de marca para el sector ferretero.",
+    "solucion": "Diseño de isologotipo formato insignia con monograma personalizado y elementos gráficos directos del rubro (tuercas).",
+    "impacto": "Identidad escalable que elevó la percepción de calidad para serigrafía y futuros soportes."
+  },
+  {
+    "id": "burgers-po",
+    "cliente": "Burger's Po (Germi Reyes)",
+    "servicio": "Rebranding Gastronómico",
+    "desafio": "Unificar elementos desconectados de un logotipo básico y mejorar la legibilidad del contacto.",
+    "solucion": "Rediseño para aportar volumen y appetite appeal. Sistematización tipográfica y paleta estratégica (negro y amarillo) con anclaje identitario.",
+    "impacto": "Identidad moderna y coherente lista para destacar en packaging y redes sociales."
+  },
+  {
+    "id": "zularama",
+    "cliente": "Zularama",
+    "servicio": "Identidad Visual, Naming y Diseño Emocional",
+    "desafio": "Crear una marca competitiva para una distribuidora de bebidas que a la vez funcionara como tributo conmemorativo.",
+    "solucion": "Naming bidireccional que esconde el mensaje 'AMAR A LUZ'. Isotipo fluido con espacio negativo que revela la silueta de una jirafa.",
+    "impacto": "Fusión perfecta entre la dinámica comercial del rubro y un profundo homenaje personal."
+  },
+  {
+    "id": "cosa-nostra",
+    "cliente": "Cosa Nostra",
+    "servicio": "Identidad de Marca Comercial",
+    "desafio": "Optimizar la imagen visual de una fiambrería y quesería local para potenciar su presencia física.",
+    "solucion": "Sistematización gráfica manteniendo la esencia rústica del negocio pero con trazos limpios y legibles.",
+    "impacto": "Mayor reconocimiento visual del local y consolidación de la marca en su zona de influencia."
+  }
+]
