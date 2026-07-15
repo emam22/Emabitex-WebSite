@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function crearTarjeta(proyecto) {
         const {
+            id = '',
             cliente = 'Proyecto sin nombre',
             servicio = '',
             desafio = '',
@@ -51,6 +52,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const card = document.createElement('div');
         card.classList.add('card');
+
+        card.dataset.id = id;
+        card.dataset.cliente = cliente;
 
         card.appendChild(crearElemento('h3', cliente));
 
@@ -64,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return card;
     }
-
     function agregarBloque(card, titulo, texto, destacado = false) {
         if (!texto) return;
         card.appendChild(crearElemento('h4', titulo));
@@ -192,3 +195,74 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
+
+document.addEventListener('click', (e) => {
+    const btnCerrar = e.target.closest('.modal-cerrar');
+    const overlayExistente = document.querySelector('.modal-overlay');
+
+    // Cerrar: click en la ❌ o click en el fondo oscuro (fuera de la card)
+    if (btnCerrar || (overlayExistente && e.target === overlayExistente)) {
+        cerrarModal();
+        return;
+    }
+
+    // Si ya hay un modal abierto, no abrir otro
+    if (overlayExistente) return;
+
+    const card = e.target.closest('#portfolio-grid .card');
+    if (!card) return;
+
+    abrirModal(card);
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') cerrarModal();
+});
+
+function abrirModal(card) {
+    const overlay = document.createElement('div');
+    overlay.classList.add('modal-overlay');
+
+    const modal = document.createElement('div');
+    modal.classList.add('modal-card');
+
+    const btnCerrar = document.createElement('button');
+    btnCerrar.classList.add('modal-cerrar');
+    btnCerrar.setAttribute('aria-label', 'Cerrar');
+    btnCerrar.innerHTML = '&times;';
+
+    const imagen = document.createElement('img');
+    imagen.classList.add('modal-imagen');
+    imagen.src = `./src/img/${card.dataset.id}.png`;
+    imagen.alt = `Imagen del proyecto ${card.dataset.cliente}`;
+    imagen.onerror = () => imagen.remove();
+
+    // NUEVO: Evento para hacer la imagen "pantalla completa" (ocultar detalles)
+    imagen.addEventListener('click', () => {
+        modal.classList.toggle('solo-imagen');
+    });
+
+    const contenido = document.createElement('div');
+    contenido.classList.add('modal-contenido');
+    contenido.innerHTML = card.innerHTML;
+
+    // CAMBIO IMPORTANTE: Agregamos primero el 'contenido' y luego la 'imagen' 
+    // para que el texto quede a la izquierda y la foto a la derecha.
+    modal.append(btnCerrar, contenido, imagen);
+
+    overlay.appendChild(modal);
+    document.body.appendChild(overlay);
+    document.body.classList.add('modal-abierto');
+
+    // Animación fluida
+    requestAnimationFrame(() => overlay.classList.add('modal-overlay--visible'));
+}
+
+function cerrarModal() {
+    const overlay = document.querySelector('.modal-overlay');
+    if (!overlay) return;
+
+    overlay.classList.remove('modal-overlay--visible');
+    document.body.classList.remove('modal-abierto');
+    overlay.addEventListener('transitionend', () => overlay.remove(), { once: true });
+}
